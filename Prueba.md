@@ -27,3 +27,10 @@ I think some packages described above as climate or those suggested to obtain nd
 #### 5. What is the NDVI, and what statistical descriptors of the NDVI time series would you use?
 
 The NDVI is the Normalized Difference Vegetation Index which is given by the formula NDVI = (NIR — RED)/(NIR + RED) and used as indicator of the plant growth. As statistical descriptor for a 6 months before I will use mean and standart desviation for sure, and maybe min and max.
+
+#### 6. What steps would this workflow require?
+1) Install and loading packages
+2) Previous data manipulation as for example create new column for season taken in account sample_date and coordinates, create new column "clima_date" 15 days before of sample_date or other named "NDVI_date" 6 months before to have the periods of time to analyze later.
+3) Obtain climatic data which includes find the nearest feature from the climatological stations to our coordinates, then obtain mean temperatures from "clima_date" to "sample_date", make the mean and the standard desviation.
+4) Obtain soil composition from the soil sources. If we work with pedon profiles in vectorial will be neccesary again use nearest functions to find which pedons represent each of our sample_id and if we work with raster format from HWSD will be necessary find those cells (8x8km) that include our sample_id and then explore associated db to obtain composition attributes for these given cells.
+5) Obtain NDVI time series from the products given by the packages cited above it will be done with the support of the "NDVI_date" and as a result a new column with the porposed statistical descriptors.
