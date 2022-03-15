@@ -31,13 +31,18 @@ The NDVI is the Normalized Difference Vegetation Index which is given by the for
 #### 6. What steps would this workflow require?
 1) Install and loading packages
 2) Previous data manipulation as for example create new column for season taken in account sample_date and coordinates making a division N/S hemisphere and working with proper solstice and equinox dates for each, create new column "clima_date" 15 days before of sample_date or other named "NDVI_date" 6 months before to have the periods of time to analyze later.
-3) Obtain climatic data which includes find the nearest feature from the climatological stations to our coordinates, then obtain mean temperatures from "clima_date" to "sample_date", make the mean and the standard desviation.
+3) Obtain climatic data which includes find the nearest feature from the climatological stations to our coordinates, then obtain mean temperatures from "clima_date" to "sample_date", make the mean and the standard desviation in new columns.
 4) Obtain soil composition from the soil sources. If we work with pedon profiles in vectorial will be neccesary again use nearest functions to find which pedons represent each of our sample_id and if we work with raster format from HWSD will be necessary find those cells (8x8km) that include our sample_id and then explore associated db to obtain composition attributes for these given cells.
 5) Obtain NDVI time series from the products given by the packages cited above it will be done with the support of the "NDVI_date" and as a result a new column with the porposed statistical descriptors.
 
-##### 7. What steps do you think are going to be more problematic and why?
+#### 7. What steps do you think are going to be more problematic and why?
 
 At the moment I think that next issues could be problematic:
 
 1) Geographically: the data interpolation from nearest point is always problematic. It could introduce uncertainity in areas with strong orography, so maybe we could obtain the altitude of our sample_id and use a function to include gradient (+-100m=+-1ºC) in our data. Other option is using products previously harmonized in raster format as those from soils were the assumptions are done by the providers.
 2) Programmatically: I think that the NDVI part will take the longest time for me because even I have theoretical knowledge and working experience with these products before it  was always done in desktop SIG softwares. Anyway, once I got familiarized with the given package and the method I will be able to overcome this problem.
+
+#### 8. How long would it take to implement this workflow and prepare the data required by the PD Team?
+
+I think that this workflow as I have planned in my mind will take 10-15 hours.
+
