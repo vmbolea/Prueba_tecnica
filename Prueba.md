@@ -22,3 +22,8 @@ I think some packages described above as climate or those suggested to obtain nd
 - https://data.isric.org/geonetwork/srv/ger/catalog.search#/metadata/a351682c-330a-4995-a5a1-57ad160e621c for soil attribute data vectorial which profiles are until 2012
 
 - or https://data.isric.org/geonetwork/srv/spa/catalog.search#/metadata/bda461b1-2f35-4d0c-bb16-44297068e10d for Harmonized World Soil Database which is a raster with aprox 8km of spatial resolution and data until 2012. It also includes a db with attribute data for each cell
+
+
+#### 5. What is the NDVI, and what statistical descriptors of the NDVI time series would you use?
+
+The NDVI is the Normalized Difference Vegetation Index which is given by the formula NDVI = (NIR — RED)/(NIR + RED) and used as indicator of the plant growth. As statistical descriptor for a 6 months before I will use mean and standart desviation for sure, and maybe min and max.
