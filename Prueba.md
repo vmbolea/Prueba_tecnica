@@ -15,3 +15,10 @@ R language
 
 I would include a script which would install packages directly from the online source, I would correctly comment my code to make it reproducible for others and if some function is going to be deprecated or even the package is going to change, as now "raster" package for example. System informs you about the change some time before it happens to let you change what is necessary to carry on being reproducible.
 
+#### 4. What data sources would you use? Please, identify them with the proper URLs, dataset names, and spatial or temporal resolution.
+
+I think some packages described above as climate or those suggested to obtain ndvi values allow user to directly work with the data sources which are given in his description. In the case of soil, even it could be done with a package, I will use:
+
+- https://data.isric.org/geonetwork/srv/ger/catalog.search#/metadata/a351682c-330a-4995-a5a1-57ad160e621c for soil attribute data vectorial which profiles are until 2012
+
+- or https://data.isric.org/geonetwork/srv/spa/catalog.search#/metadata/bda461b1-2f35-4d0c-bb16-44297068e10d for Harmonized World Soil Database which is a raster with aprox 8km of spatial resolution and data until 2012. It also includes a db with attribute data for each cell
